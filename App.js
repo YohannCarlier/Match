@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import BottomTabNavigator from './bottomTabNavigator';
 
-export default function App() {
+import HomeScreen from './screen/home';
+import ConnexionScreen from './screen/connexion';
+import InscriptionScreen from './screen/inscription';
+import ReservationScreen from './screen/reservations';
+import DetailsReservationScreen from './screen/DetailsReservation';
+import ModifProfilScreen from './screen/modifProfil';
+
+
+const Stack = createStackNavigator();
+
+
+  
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Connexion">
+        <Stack.Screen name="Connexion" component={ConnexionScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Reservation" component={ReservationScreen} />
+        <Stack.Screen name="Inscription" component={InscriptionScreen} />
+        <Stack.Screen name="DetailsReservation" component={DetailsReservationScreen} />
+        <Stack.Screen name="ModifProfil" component={ModifProfilScreen} />
+        <Stack.Screen name="Main" component={BottomTabNavigator} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
