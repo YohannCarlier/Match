@@ -27,6 +27,15 @@ export default function ReservationScreen({ navigation, route }) {
             selectedTextColor: 'white'
           }
         }}
+        renderArrow={(direction) => (
+          <View style={styles.arrowContainer}>
+            {direction === 'left' ? (
+              <Text style={styles.arrowText}>{'<'}</Text>
+            ) : (
+              <Text style={styles.arrowText}>{'>'}</Text>
+            )}
+          </View>
+        )}
       />
       <Text style={styles.label}>Sélectionner une distance:</Text>
       <Picker
@@ -74,7 +83,7 @@ const styles = StyleSheet.create({
   },
   picker: {
     height: 50,
-    width: '100%',
+    width: '80%',
   },
   switchContainer: {
     flexDirection: 'row',

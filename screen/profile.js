@@ -21,6 +21,11 @@ export default function ProfileScreen({ navigation }) {
         <Text style={styles.buttonText}>Modifier profil</Text>
       </TouchableOpacity>
       <TouchableOpacity 
+        style={styles.button}
+        onPress={() => navigation.navigate('MesMatchs')}>
+        <Text style={styles.buttonText}>Mes Matchs</Text>
+      </TouchableOpacity>
+      <TouchableOpacity 
         style={[styles.button, styles.logoutButton]}
         onPress={() => navigation.navigate('Connexion')}>
         <Text style={styles.buttonText}>Se déconnecter</Text>

@@ -6,7 +6,15 @@ const Inscription = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Inscription</Text>
-      <Image source={require('../assets/logo.png')} style={styles.logo} />
+      {/* <Image source={require('../assets/logo.png')} style={styles.logo} /> */}
+      <select id="seclectionnerSexe">
+          <option value="homme">Homme</option>
+          <option value="femme">Femme</option>
+      </select><br></br>
+      <Text>Entrez vos informations</Text>
+      <TextInput style={styles.input} placeholder="Age" autoCapitalize="none" />
+      <TextInput style={styles.input} placeholder="Poids" autoCapitalize="none" />
+      <TextInput style={styles.input} placeholder="Taille" autoCapitalize="none" />
       <TextInput style={styles.input} placeholder="Email" autoCapitalize="none" />
       <TextInput style={styles.input} placeholder="Mot De Passe" secureTextEntry />
       <TextInput style={styles.input} placeholder="Confirmer le Mot De Passe" secureTextEntry />

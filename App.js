@@ -9,6 +9,7 @@ import InscriptionScreen from './screen/inscription';
 import ReservationScreen from './screen/reservations';
 import DetailsReservationScreen from './screen/DetailsReservation';
 import ModifProfilScreen from './screen/modifProfil';
+import MesMatchsScreen from './screen/mesMatchs';
 
 
 const Stack = createStackNavigator();
@@ -26,6 +27,7 @@ const App = () => {
         <Stack.Screen name="Inscription" component={InscriptionScreen} />
         <Stack.Screen name="DetailsReservation" component={DetailsReservationScreen} />
         <Stack.Screen name="ModifProfil" component={ModifProfilScreen} />
+        <Stack.Screen name="MesMatchs" component={MesMatchsScreen} />
         <Stack.Screen name="Main" component={BottomTabNavigator} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>

@@ -26,8 +26,6 @@ const AddMatchScreen = () => {
         style={styles.picker}>
         <Picker.Item label="Tennis" value="Tennis" />
         <Picker.Item label="Five" value="Five" />
-        <Picker.Item label="Ping-Pong" value="Ping-Pong" />
-        <Picker.Item label="Badminton" value="Badminton" />
         <Picker.Item label="Padel" value="Padel" />
         <Picker.Item label="Basket" value="Basket" />
         {/* Add other sports as needed */}

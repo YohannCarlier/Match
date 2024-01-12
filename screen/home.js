@@ -5,8 +5,8 @@ import { StyleSheet, View, Text, TouchableOpacity, ScrollView, Image } from 'rea
 const sports = [
   { name: 'Tennis', image: require('../assets/tennis.png') }, 
   { name: 'Five', image: require('../assets/five.png') },
-  { name: 'Ping-Pong', image: require('../assets/ping.png') },
-  { name: 'Badminton', image: require('../assets/badminton.png') },
+  //{ name: 'Ping-Pong', image: require('../assets/ping.png') },
+  //{ name: 'Badminton', image: require('../assets/badminton.png') },
   { name: 'Padel', image: require('../assets/padel.png') }, 
   { name: 'Basket', image: require('../assets/basket.png') },
   
